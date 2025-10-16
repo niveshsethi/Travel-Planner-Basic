@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoyageVista - Your Personal Travel Planner</title>
+
+    <meta name="description" content="Explore and plan your next adventure with VoyageVista. Discover beautiful destinations, get travel tips, and save your favorite places." />
+    <meta name="author" content="Dualite Alpha" />
+
+    <meta property="og:title" content="VoyageVista - Your Personal Travel Planner" />
+    <meta property="og:description" content="Explore and plan your next adventure with VoyageVista. Discover beautiful destinations, get travel tips, and save your favorite places." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.ibb.co/M8V4z0N/voyage-vista-preview.png" />
+    <meta property="og:image:alt" content="A preview of the VoyageVista travel planner interface showing destination cards." />
+    <meta property="og:url" content="https://alpha.dualite.dev" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VoyageVista - Your Personal Travel Planner" />
+    <meta name="twitter:description" content="Explore and plan your next adventure with VoyageVista. Discover beautiful destinations, get travel tips, and save your favorite places." />
+    <meta name="twitter:image" content="https://i.ibb.co/M8V4z0N/voyage-vista-preview.png" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/HLfD5wgf/dualite-favicon.png" />
+    <link rel="canonical" href="https://alpha.dualite.dev" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "VoyageVista",
+        "url": "https://alpha.dualite.dev",
+        "description": "Explore and plan your next adventure with VoyageVista.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dualite Alpha"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">VoyageVista</h1>
+        <nav>
+          <button id="favorites-btn" class="nav-button">
+            <img src="/node_modules/lucide-static/icons/heart.svg" alt="Favorites Icon" class="icon" />
+            <span>Favorites</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content container">
+          <h2>Find Your Next Destination</h2>
+          <p>Explore articles, tips, and guides for your next adventure.</p>
+          <div class="search-bar">
+            <img src="/node_modules/lucide-static/icons/search.svg" alt="Search Icon" class="icon" />
+            <input type="text" id="search-input" placeholder="Search for places, countries..." />
+          </div>
+        </div>
+      </section>
+
+      <section id="destinations-section" class="destinations-section container">
+        <div class="section-header">
+            <h3 id="section-title">Popular Destinations</h3>
+            <button id="show-all-btn" class="nav-button active">Show All</button>
+        </div>
+        <div id="destinations-grid" class="destinations-grid">
+          <!-- Destination cards will be injected here by JavaScript -->
+        </div>
+        <p id="no-results" class="no-results hidden">No destinations found. Try a different search.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 VoyageVista. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <button id="modal-close-btn" class="modal-close-btn">
+          <img src="/node_modules/lucide-static/icons/x.svg" alt="Close Icon" class="icon" />
+        </button>
+        <div id="modal-body">
+          <!-- Modal content will be injected here by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
